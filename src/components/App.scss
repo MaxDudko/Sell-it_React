@@ -1,0 +1,19 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    font-family: "Arial";
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    .content {
+        width: 100%;
+    }
+}
+
+@import "Header.scss";
+@import "Footer.scss";
+@import "LoginPage.scss";
+@import "ProductList.scss";
