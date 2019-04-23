@@ -33,6 +33,12 @@
                     width: 40%;
                     white-space: nowrap;
                     cursor: pointer;
+                    &:hover {
+                        border-radius: 5px;
+                        transform: scale(0.99);
+                        transition: 1s;
+                        border-bottom: 2px solid #91d763;
+                    }
                 }
             }
             .login-form__login-field {
@@ -45,10 +51,22 @@
                     background-color: transparent;
                     border-bottom: 2px solid #ffffff;
                     margin: 2vh 0;
+                    &:hover {
+                        border-radius: 5px;
+                        transform: scale(0.99);
+                        transition: 1s;
+                        border-bottom: 2px solid #91d763;
+                    }
                 }
                 .login-field__btn {
                     padding: 1vh;
                     cursor: pointer;
+                    &:hover {
+                        border-radius: 5px;
+                        transform: scale(0.99);
+                        transition: 1s;
+                        border-bottom: 2px solid #91d763;
+                    }
                 }
             }
         }
