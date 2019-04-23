@@ -3,6 +3,14 @@ import './LoginPage.scss';
 import logo from '../../images/logo-1.png';
 
 class LoginPage extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            is: false
+        }
+    }
+
+
     render() {
         return (
             <div className="login-page">
@@ -18,7 +26,7 @@ class LoginPage extends Component {
                         <div className="login-form__login-field">
                             <input className="login-field__input" type="email" placeholder="Email" />
                             <input className="login-field__input" type="password" placeholder="Password" />
-                            <button className="login-field__btn">Login</button>
+                            <button className="login-field__btn" onClick={this.props.change}>Login</button>
                         </div>
                     </div>  
                 </div>

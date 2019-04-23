@@ -6,6 +6,12 @@ import userPhoto from '../../images/user_Kim-Evans.jpg';
 import signOut from '../../images/sign-out.png';
 
 class Header extends Component {
+    constructor() {
+        super()
+        this.state = {
+            is: true
+        }
+    }
     render() {
         return (
             <div className="header">
@@ -22,7 +28,7 @@ class Header extends Component {
                         <div className="account__user-name">Kim Evans</div>
                     </div>
                     <div className="account__sign-out">
-                        <a href="/"><img src={signOut} alt="sign out" /></a>
+                        <a href="/"><img src={signOut} alt="sign out" onClick={this.props.changeActive} /></a>
                     </div>
                 </div>
             </div>
