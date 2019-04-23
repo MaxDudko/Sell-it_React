@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LoginPage.scss';
-import logo from '../images/logo-1.png';
+import logo from '../../images/logo-1.png';
 
 class LoginPage extends Component {
     render() {

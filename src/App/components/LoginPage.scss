@@ -5,7 +5,7 @@
 
     .login-page__left-section {
         width: 80%;
-        background: url(../images/b-ground.jpg) no-repeat;
+        background: url(../../images/b-ground.jpg) no-repeat;
         background-size: 100% 100%;
     }    
     .login-page__right-section {
@@ -60,9 +60,9 @@
         display: none;
     }
     .login-page__right-section {
-        width: 100%;
+        width: 100% !important;
         overflow: hidden;
-        background: url(../images/b-ground.jpg) no-repeat;
+        background: url(../../images/b-ground.jpg) no-repeat;
         background-size: 100% 100%;
         .right-section__logo {
             display: none;
