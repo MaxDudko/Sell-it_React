@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
 import './ProductList.scss';
 import viewImg from '../../images/eye.png';
-import product_1 from '../../images/product_img-1.png';
-import product_2 from '../../images/product_img-2.png';
-import product_3 from '../../images/product_img-3.png';
-import product_4 from '../../images/product_img-4.png';
+import product_1 from '../../images/product_1.png';
+import product_2 from '../../images/product_2.png';
+import product_3 from '../../images/product_3.png';
+import product_4 from '../../images/product_4.png';
 
-const imgsrcArr = [product_1, product_2, product_3, product_4];
-const Product = (props) => (
-     <div className="product">
-         <img className="product__image" src={props.src} alt="product_img" />
-         <div className="product__title">
-                <p>Product title</p>
-                <img className="product__title-view" src={viewImg} alt="view" />
-         </div>
-     </div>
-)
+const productData = [product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4,
+                     product_1, product_2, product_3, product_4];
 
 class ProductList extends Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <div className="product-list">
-               { imgsrcArr.map((el) => <Product src={el} />) }
-               { imgsrcArr.map((el) => <Product src={el} />) }
-               { imgsrcArr.map((el) => <Product src={el} />) }
-               { imgsrcArr.map((el) => <Product src={el} />) }
+                {productData.map((el, i) => (
+                    <div className="product" key={i}>
+                        <img className="product__image" src={el} alt="product_img" />
+                        <div className="product__title">
+                            <p>Product title</p>
+                            <img className="product__title-view" src={viewImg} alt="view" />
+                        </div>
+                    </div> 
+                ))}
             </div>
+            
         )
     }
 }
