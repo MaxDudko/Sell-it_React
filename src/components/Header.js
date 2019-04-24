@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Header.scss';
-import logo from '../../images/logo-2.png';
-import search from '../../images/search.png';
-import userPhoto from '../../images/user_Kim-Evans.jpg';
-import signOut from '../../images/sign-out.png';
+import logo from '../images/logo-2.png';
+import search from '../images/search.png';
+import userPhoto from '../images/user_Kim-Evans.jpg';
+import signOut from '../images/sign-out.png';
 
-class Header extends Component {
-    constructor() {
-        super()
-        this.state = {
-            is: true
-        }
-    }
-    render() {
-        return (
+const Header = (props) => (
             <div className="header">
                 <div className="header__logo">
                     <a href="/"><img src={logo} alt="Sell it" /></a>
@@ -28,12 +20,10 @@ class Header extends Component {
                         <div className="account__user-name">Kim Evans</div>
                     </div>
                     <div className="account__sign-out">
-                        <a href="/"><img src={signOut} alt="sign out" onClick={this.props.changeActive} /></a>
+                        <a href="/"><img src={signOut} alt="sign out" onClick={props.change} /></a>
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+)
 
 export default Header;
