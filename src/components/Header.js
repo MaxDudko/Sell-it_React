@@ -26,7 +26,7 @@ const Header = (props) => (
                 </div>
                 :
                 <div className="header__account">
-                    <span>Welcome</span><a href="/">Login</a><span>or</span><a href="/">Register</a><span>for Start!</span>
+                    <p>Welcome <a href="/">Login</a> or <a href="/">Register</a> for Start!</p>
                 </div>
                 }
             </div>

@@ -73,11 +73,12 @@
 
     }
 }
-@media screen and (max-width: 576px) {  
+@media screen and (max-width: 720px) {  
     .login-page__left-section {
         display: none;
     }
     .login-page__right-section {
+        padding-top: 20vh;
         width: 100% !important;
         overflow: hidden;
         background: url(../images/b-ground.jpg) center;
