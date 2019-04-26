@@ -6,13 +6,35 @@ import Footer from './components/Footer';
 import LoginPage from './components/LoginPage';
 import ProductList from './components/ProductList';
 
-
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-          isLogin: false
+          isLogin: false,
+          error: null,
+          isLoaded: false,
+          items: []
         }
+    }
+
+    componentDidMount() {
+        fetch("http://light-it-04.tk/api/posters/")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              this.setState({
+                isLoaded: true,
+                items: result.items
+              });
+            },
+
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )      
     }
 
     handleClick = () => {
@@ -31,7 +53,7 @@ class App extends Component {
                     { content }
                 </div>
                 <Footer />
-            </div>
+            </div>            
         );
      }
 }

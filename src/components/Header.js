@@ -4,8 +4,6 @@ import logo from '../images/logo-2.png';
 import search from '../images/search.png';
 import userPhoto from '../images/user_Kim-Evans.jpg';
 import signOut from '../images/sign-out.png';
-console.log(styles); 
-
 
 const Header = (props) => (
             <div className={styles.header}>
