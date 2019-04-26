@@ -14,6 +14,7 @@ const Header = (props) => (
                     <img className="search__img" src={search} alt="Search" />
                     <input className="search__input" type="search" placeholder="Try find somethink!" />
                 </div>
+                { props.isLogin ?
                 <div className="header__account">
                     <div className="account__user">
                         <img className="account__user-img" src={userPhoto} alt="Kim Evans" />
@@ -23,6 +24,11 @@ const Header = (props) => (
                         <a href="/"><img src={signOut} alt="sign out" onClick={props.change} /></a>
                     </div>
                 </div>
+                :
+                <div className="header__account">
+                    <span>Welcome</span><a href="/">Login</a><span>or</span><a href="/">Register</a><span>for Start!</span>
+                </div>
+                }
             </div>
 )
 

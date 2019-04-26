@@ -26,7 +26,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header />
+                <Header isLogin = {this.state.isLogin} />
                 <div className="content">
                     { content }
                 </div>
