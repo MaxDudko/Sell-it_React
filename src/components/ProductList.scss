@@ -3,16 +3,14 @@
     width: 100%;  
     justify-content: space-around; 
     flex-wrap: wrap;
-    padding: 20vh 0vh 10vh;
+    padding: 10vh 0vh 10vh;
 
     .product {
         display: flex;
         flex-direction: column;
         margin: 1vh;
-        width: 20%;
 
         .product__image {
-            height: auto;
         }
         .product__title {
             display: flex;
@@ -43,6 +41,14 @@
         padding: 25vh 0vh 10vh;
     }
     .product {
-        width: 100% !important;
+    }
+}
+@media screen and (min-width: 960px) {   
+    .product-list {
+        width: 100%;
+        padding: 10vh 0vh 10vh;
+    }
+    .product {
+        width: 20%;
     }
 }
