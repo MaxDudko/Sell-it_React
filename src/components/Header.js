@@ -28,7 +28,7 @@ const Header = (props) => (
                 </div>
                 :
                 <div className={styles.header__account}>
-                    <p>Welcome <a className={styles.account__link} href="/">Login</a> or <a className={styles.account__link} href="/">Register</a> for Start!</p>
+                    <p>Welcome, <a className={styles.account__link} href="/">Login</a> or <a className={styles.account__link} href="/">Register</a> for Start!</p>
                 </div>
                 }
             </div>
