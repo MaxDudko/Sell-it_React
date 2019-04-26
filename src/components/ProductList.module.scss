@@ -1,4 +1,4 @@
-.product-list {
+.productList {
     display: flex;
     width: 100%;  
     justify-content: space-around; 
@@ -21,7 +21,7 @@
             background-color: #00b3be;
             flex-wrap: nowrap;
         }
-        .product__title-view {
+        .product__titleView {
             width: 24px;
             height: 16px;
             &:hover {
@@ -36,7 +36,7 @@
  
 
 @media screen and (max-width: 576px) {   
-    .product-list {
+    .productList {
         width: 100%;
         padding: 25vh 0vh 10vh;
     }
@@ -44,7 +44,7 @@
     }
 }
 @media screen and (min-width: 960px) {   
-    .product-list {
+    .productList {
         width: 100%;
         padding: 10vh 0vh 10vh;
     }

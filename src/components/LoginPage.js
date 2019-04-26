@@ -1,22 +1,22 @@
 import React from 'react';
-import './LoginPage.scss';
+import styles from './LoginPage.module.scss';
 import logo from '../images/logo-1.png';
 
 const LoginPage = (props) => (
-            <div className="login-page">
-                <div className="login-page__left-section">
+            <div className={styles.loginPage}>
+                <div className={styles.loginPage__leftSection}>
                 </div>
-                <div className="login-page__right-section">
-                    <img className="right-section__logo" src={logo} alt="Sell it" />
-                    <div className="right-section__login-form">
-                        <div className="login-form__sign-button">
-                            <button className="sign-button__btn">Sign In</button>
-                            <button className="sign-button__btn">Sign Up</button>
+                <div className={styles.loginPage__rightSection}>
+                    <img className={styles.rightSection__logo} src={logo} alt="Sell it" />
+                    <div className={styles.rightSection__loginForm}>
+                        <div className={styles.loginForm__signButton}>
+                            <button className={styles.signButton__btn}>Sign In</button>
+                            <button className={styles.signButton__btn}>Sign Up</button>
                         </div>
-                        <div className="login-form__login-field">
-                            <input className="login-field__input" type="email" placeholder="Email" />
-                            <input className="login-field__input" type="password" placeholder="Password" />
-                            <button className="login-field__btn" onClick={props.change}>Login</button>
+                        <div className={styles.loginForm__loginField}>
+                            <input className={styles.loginField__input} type="email" placeholder="Email" />
+                            <input className={styles.loginField__input} type="password" placeholder="Password" />
+                            <button className={styles.loginField__btn} onClick={props.change}>Login</button>
                         </div>
                     </div>  
                 </div>

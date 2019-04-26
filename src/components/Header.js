@@ -1,32 +1,34 @@
 import React from 'react';
-import './Header.scss';
+import styles from './Header.module.scss';
 import logo from '../images/logo-2.png';
 import search from '../images/search.png';
 import userPhoto from '../images/user_Kim-Evans.jpg';
 import signOut from '../images/sign-out.png';
+console.log(styles); 
+
 
 const Header = (props) => (
-            <div className="header">
-                <div className="header__logo">
+            <div className={styles.header}>
+                <div className={styles.header__logo}>
                     <a href="/"><img src={logo} alt="Sell it" /></a>
                 </div>
-                <div className="header__search">
-                    <img className="search__img" src={search} alt="Search" />
-                    <input className="search__input" type="search" placeholder="Try find somethink!" />
+                <div className={styles.header__search}>
+                    <img className={styles.search__img} src={search} alt="Search" />
+                    <input className={styles.search__input} type="search" placeholder="Try find somethink!" />
                 </div>
                 { props.isLogin ?
-                <div className="header__account">
-                    <div className="account__user">
-                        <img className="account__user-img" src={userPhoto} alt="Kim Evans" />
-                        <div className="account__user-name">Kim Evans</div>
+                <div className={styles.header__account}>
+                    <div className={styles.account__user}>
+                        <img className={styles.account__userImg} src={userPhoto} alt="Kim Evans" />
+                        <div className={styles.account__userName}>Kim Evans</div>
                     </div>
-                    <div className="account__sign-out">
+                    <div className={styles.account__signOut}>
                         <a href="/"><img src={signOut} alt="sign out" onClick={props.change} /></a>
                     </div>
                 </div>
                 :
-                <div className="header__account">
-                    <p>Welcome <a href="/">Login</a> or <a href="/">Register</a> for Start!</p>
+                <div className={styles.header__account}>
+                    <p>Welcome <a className={styles.account__link} href="/">Login</a> or <a className={styles.account__link} href="/">Register</a> for Start!</p>
                 </div>
                 }
             </div>

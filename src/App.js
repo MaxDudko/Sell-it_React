@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -25,9 +25,9 @@ class App extends Component {
         const content = this.state.isLogin ? <ProductList change={this.handleClick} /> : <LoginPage change={this.handleClick} />
 
         return (
-            <div className="App">
+            <div className={styles.App}>
                 <Header isLogin = {this.state.isLogin} />
-                <div className="content">
+                <div className={styles.content}>
                     { content }
                 </div>
                 <Footer />

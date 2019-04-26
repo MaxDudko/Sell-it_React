@@ -42,16 +42,23 @@
             vertical-align: middle;
             cursor: pointer;
         }
-        .account__user-img {
+        .account__userImg {
             border-radius: 50%;
         }
-        .account__user-name {
+        .account__userName {
             margin: auto 2vh;
         }
-        .account__sign-out {
+        .account__signOut {
             &:hover {
                 transform: scale(0.9);
                 transition: 1s;
+            }
+        }
+        .account__link {
+            text-decoration: none;
+            color: #ffffff;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
