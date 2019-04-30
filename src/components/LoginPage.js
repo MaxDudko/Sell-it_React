@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LoginPage.module.scss';
 import logo from '../images/logo-1.png';
 
@@ -16,7 +17,7 @@ const LoginPage = (props) => (
                         <div className={styles.loginForm__loginField}>
                             <input className={styles.loginField__input} type="email" placeholder="Email" />
                             <input className={styles.loginField__input} type="password" placeholder="Password" />
-                            <button className={styles.loginField__btn} onClick={props.change}>Login</button>
+                            <Link to="/"><button className={styles.loginField__btn} onClick={props.change}>Login</button></Link>
                         </div>
                     </div>  
                 </div>

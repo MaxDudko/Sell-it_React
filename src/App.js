@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import styles from './App.module.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import styles from './App.module.scss';
 import LoginPage from './components/LoginPage';
-import ProductList from './components/ProductList';
+import OnlineStore from './containers/OnlineStore';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          isLogin: false,
+          isLogin: true,
           error: null,
           isLoaded: false,
           items: []
@@ -44,15 +43,14 @@ class App extends Component {
     }
 
     render() {
-        const content = this.state.isLogin ? <ProductList change={this.handleClick} /> : <LoginPage change={this.handleClick} />
-
         return (
             <div className={styles.App}>
-                <Header isLogin = {this.state.isLogin} />
-                <div className={styles.content}>
-                    { content }
-                </div>
-                <Footer />
+                <BrowserRouter>
+                  <Switch>
+                    <Route exact path="/" component={OnlineStore} change={this.handleClick}/>  
+                    <Route exact path="/LoginPage" component={LoginPage} />
+                  </Switch>
+                </BrowserRouter>
             </div>            
         );
      }
