@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import styles from './App.module.scss';
 import LoginPageContainer from './containers/LoginPage/LoginPageContainer';
 import ProductListContainer from './containers/ProductList/ProductListContainer';
 
-class App extends Component {
+
+
+
+
+
+export class App extends Component {
 
     render() {
         return (
@@ -17,7 +21,7 @@ class App extends Component {
                   </Switch>
                 </BrowserRouter>
             </div>            
-        );
+        )
      }
 }
 
