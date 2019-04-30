@@ -8,8 +8,22 @@ class ProductListContainer extends Component {
         super(props)
         this.state = {
             isLogin: true,
+            data: [],
+            isLoading: false
         }
     }
+
+    componentDidMount() {
+        fetch('http://light-it-04.tk/api/posters/')
+        .then(response => response.json())
+        .then(obj => obj.data)
+        .then(data => this.setState({
+            data: data,
+            isLoading: false
+        }))
+        .catch(error => console.log(error))
+    }
+      
     
     handleClick = () => {
         this.setState({
@@ -21,7 +35,7 @@ class ProductListContainer extends Component {
         return (
             <div>
               <Header isLogin={this.state.isLogin} />
-              <ProductList />
+              <ProductList data={this.state.data} />
               <Footer />
             </div>
         )

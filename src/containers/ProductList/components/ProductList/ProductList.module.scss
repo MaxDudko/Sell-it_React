@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;  
     justify-content: space-around; 
+    align-content: stretch;
     flex-wrap: wrap;
     padding: 10vh 0vh 10vh;
 
@@ -11,6 +12,8 @@
         margin: 1vh;
 
         .product__image {
+            width: 320px;
+            height: 200px;
         }
         .product__title {
             display: flex;
