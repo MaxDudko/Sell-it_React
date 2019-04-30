@@ -5,7 +5,7 @@
 
     .loginPage__leftSection {
         width: 80%;
-        background: url(../images/b-ground.jpg) no-repeat;
+        background: url(../../../images/b-ground.jpg) no-repeat;
         background-size: 100% 100%;
     }    
     .loginPage__rightSection {
@@ -59,6 +59,7 @@
                     }
                 }
                 .loginField__btn {
+                    width: 100%;
                     padding: 1vh;
                     cursor: pointer;
                     &:hover {
@@ -81,10 +82,10 @@
         padding-top: 20vh;
         width: 100% !important;
         overflow: hidden;
-        background: url(../images/b-ground.jpg) center;
+        background: url(../../../images/b-ground.jpg) center;
         background-size: 100% 100%;
         .rightSection__logo {
-            display: none;
+            content: url(../../../images/logo-2.png)
         }
     }
 }
