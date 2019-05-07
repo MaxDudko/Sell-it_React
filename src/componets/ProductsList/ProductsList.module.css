@@ -1,0 +1,9 @@
+.products {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .products {
+        margin-top: 40px;
+    }
+}

@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import styles from './App.module.scss';
-import LoginPageContainer from './containers/LoginPage/LoginPageContainer';
-import ProductListContainer from './containers/ProductList/ProductListContainer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ProductsList from "./componets/ProductsList/ProductsList";
+import ProductPage from "./componets/ProductsList/ProductPage/ProductPage";
+import SignPage from "./componets/SignPage/SignPage";
+import UserPage from './componets/UserPage/UserPage';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
-
-
-
-
-
-export class App extends Component {
-
-    render() {
-        return (
-            <div className={styles.App}>
-                <BrowserRouter>
-                  <Switch>
-                    <Route exact path="/" component={ProductListContainer} />  
-                    <Route exact path="/LoginPage" component={LoginPageContainer} />
-                  </Switch>
-                </BrowserRouter>
-            </div>            
-        )
-     }
-}
+const App = () => {
+    return (
+        <div className="App">
+            <Router>
+                <Switch>
+                    <Route exact path="/"component={ProductsList} />
+                    <Route path="/sign-in" render={ () => (<SignPage activeTab={"signin"} />) }/>
+                    <Route path="/sign-up" render={ () => (<SignPage activeTab={"signup"} />) }/>
+                    <Route path="/products/:productId" render={({ match }) => (<ProductPage productId={Number(match.params.productId)} />)} />
+                    <Route path="/userdetails/:userId" render={({ match }) => (<UserPage userId={match.params.userId} />)} />
+                </Switch>
+            </Router>
+        </div>
+    )
+};
 
 export default App;
